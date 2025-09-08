@@ -1,0 +1,145 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Mobile Bike Repair — On‑Site Service</title>
+  <meta name="description" content="Mobile bike repair. Call or text for fast, on‑site service. Response within 2 hours." />
+  <meta name="theme-color" content="#ffffff" />
+  <style>
+    /* Minimal, clean, light theme inspired by james-odonnell.com */
+    :root{
+      --bg:#ffffff;
+      --text:#0a0a0a;
+      --muted:#4a4a4a;
+      --link:#0a7cff;
+      --border:#e6e6e6;
+      --max:760px;
+      --space:22px;
+      --radius:10px;
+    }
+    *{box-sizing:border-box}
+    html,body{margin:0;padding:0;background:var(--bg);color:var(--text);font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, "Apple Color Emoji","Segoe UI Emoji";}
+    a{color:var(--link);text-underline-offset:3px}
+    .wrap{max-width:var(--max);margin:0 auto;padding:28px}
+    header{padding:28px 0 6px}
+    h1,h2{font-weight:700;line-height:1.2;margin:0 0 8px}
+    h1{font-size: clamp(28px, 5vw, 42px)}
+    h2{font-size: clamp(20px, 3.2vw, 26px);margin-top:28px}
+    p{margin:0 0 14px;font-size: clamp(16px, 2.2vw, 18px);line-height:1.6}
+    small, .note{color:var(--muted);font-size:14px}
+    section{padding:18px 0}
+    hr{border:0;border-top:1px solid var(--border);margin:24px 0}
+
+    /* Buttons */
+    .cta-row{display:flex;flex-wrap:wrap;gap:10px;margin-top:10px}
+    .btn{display:inline-flex;align-items:center;gap:8px;padding:12px 14px;border:1px solid var(--text);border-radius:8px;text-decoration:none;color:var(--text)}
+    .btn:hover{background:#f7f7f7}
+
+    /* Simple list */
+    ul{margin:10px 0 0 20px;padding:0}
+    li{margin:6px 0}
+
+    footer{margin:36px 0 10px;color:var(--muted);font-size:14px;text-align:left}
+  </style>
+  <script>
+    // One place to set your phone number
+    const PHONE = "+1-XXX-XXX-XXXX"; // e.g. +1-781-555-1212
+    document.addEventListener('DOMContentLoaded', () => {
+      const nodes = document.querySelectorAll('[data-phone]');
+      nodes.forEach(n => n.textContent = PHONE);
+      document.querySelectorAll('[data-tel]').forEach(n => n.href = `tel:${PHONE}`);
+      document.querySelectorAll('[data-sms]').forEach(n => n.href = `sms:${PHONE}`);
+      document.getElementById('year').textContent = new Date().getFullYear();
+    });
+  </script>
+</head>
+<body>
+  <main class="wrap">
+    <!-- Summary graf -->
+    <header>
+      <h1>Mobile Bike Repair — I Come to You</h1>
+      <p>I fix bikes at your home or office with clean, reliable work. Most common issues handled on the spot so you can keep riding. No shop line. No hassle.</p>
+    </header>
+
+    <!-- Primary contact -->
+    <section>
+      <h2>Call or text to book</h2>
+      <p><strong>Response within 2 hours</strong> during daylight hours. If I’m on a job, I’ll text you an ETA.</p>
+      <div class="cta-row">
+        <a class="btn" data-tel href="#">📞 Call</a>
+        <a class="btn" data-sms href="#">💬 Text</a>
+      </div>
+      <p class="note">Phone: <strong data-phone></strong></p>
+    </section>
+
+    <hr />
+
+    <!-- Services (no prices) -->
+    <section>
+      <h2>Repairs & Services</h2>
+      <p class="note">Road • Gravel • Mountain • Commuter • Kids</p>
+      <ul>
+        <li><strong>Flat fixes & tires:</strong> tubes, tubeless setup, tire swaps, sealant refresh</li>
+        <li><strong>Wheels:</strong> bearing service, hub/freehub inspection, spoke replacement, minor truing</li>
+        <li><strong>Brakes:</strong> pad replacement, rotor alignment, cable/housing, lever adjustment, hydraulic bleed</li>
+        <li><strong>Drivetrain:</strong> chain & cassette replacement, derailleur tune, hanger alignment, shifting diagnostics</li>
+        <li><strong>Cockpit & fit basics:</strong> bar tape, grips, saddle/seatpost, lever position</li>
+        <li><strong>Bottom bracket & cranks:</strong> creak tracking, torque checks, replacement (cartridge/press‑fit)</li>
+        <li><strong>Suspension (MTB):</strong> sag & rebound setup, seal checks, hardware torque, basic service</li>
+        <li><strong>General tune‑ups:</strong> safety check, bolt torque, cleaning, lubrication, ride‑ready adjustments</li>
+        <li><strong>Assembly & checks:</strong> new‑bike builds, cargo/child‑seat installs, accessory mounting (racks, lights, fenders)</li>
+      </ul>
+    </section>
+
+    <hr />
+
+    <!-- Why mobile -->
+    <section>
+      <h2>Why mobile?</h2>
+      <ul>
+        <li><strong>Convenience:</strong> no loading bikes, no return trips.</li>
+        <li><strong>Speed:</strong> most fixes done in a single visit.</li>
+        <li><strong>Transparency:</strong> watch, ask questions, learn about your bike.</li>
+        <li><strong>Quality:</strong> proper tools and torque specs, thoughtful diagnostics.</li>
+      </ul>
+    </section>
+
+    <hr />
+
+    <!-- About me -->
+    <section>
+      <h2>About me</h2>
+      <p>I’m a longtime cyclist and mechanic who cares about quiet drivetrains, straight wheels, and brakes that feel right. I’ve worked on steel commuters, modern MTB, and gravel setups. If it’s fixable curbside, I’ll get it done—and if it needs shop machinery, I’ll give you an honest plan.</p>
+    </section>
+
+    <hr />
+
+    <!-- Final contact -->
+    <section>
+      <h2>Ready to ride?</h2>
+      <p>Call or text and I’ll reply within two hours with a time window. Include your issue, bike type, and location so I can bring what’s needed.</p>
+      <div class="cta-row">
+        <a class="btn" data-tel href="#">📞 Call</a>
+        <a class="btn" data-sms href="#">💬 Text</a>
+      </div>
+      <p class="note">Phone: <strong data-phone></strong></p>
+    </section>
+
+    <footer>
+      <div>© <span id="year"></span> Mobile Bike Repair</div>
+    </footer>
+  </main>
+
+  <!-- Simple LocalBusiness schema -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "LocalBusiness",
+    "name": "Mobile Bike Repair",
+    "description": "Mobile bicycle repair and tune-ups — call or text for on-site service. Response within 2 hours.",
+    "telephone": "+1-XXX-XXX-XXXX"
+  }
+  </script>
+</body>
+</html>
